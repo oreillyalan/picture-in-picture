@@ -1,7 +1,7 @@
 const videoElement = document.getElementById('video');
 const button = document.getElementById('button');
 
-// P
+// Promt user for their media stream choice
 async function selectMediaSTream(){
     try {
         const captureStream = await navigator.mediaDevices.getDisplayMedia();
@@ -18,6 +18,7 @@ async function selectMediaSTream(){
 
 }
 
+
 button.addEventListener('click',async () => {
     // Disable Button
     button.disabled = true;
@@ -27,7 +28,6 @@ button.addEventListener('click',async () => {
     button.disabled = false;
 
 });
-
 //on load
 
 selectMediaSTream();
